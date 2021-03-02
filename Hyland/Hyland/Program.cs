@@ -29,6 +29,20 @@ namespace Hyland
             Console.WriteLine("The perimeter is:");
             Console.WriteLine(rectangle.GetPerimeter());
 
+            Console.WriteLine("Enter length of one side of a Square");
+            int length = Convert.ToInt32(Console.ReadLine());
+            Square square = new Square(length);
+            Console.WriteLine("The area is: ");
+            Console.WriteLine(square.GetArea());
+
+            List<Rectangle> rectangles = new List<Rectangle>();
+            rectangles.Add(rectangle);
+
+            foreach(Rectangle r in rectangles)
+            {
+                Console.WriteLine(r.ToString());
+            }
+
             Console.ReadLine();
         }
     }

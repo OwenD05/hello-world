@@ -7,29 +7,28 @@ using System.Threading.Tasks;
 namespace Hyland
 {
 
-    class Square
+    class Square : Rectangle
     {
 
-        private int size;
-        public int Size
+       public Square(int length) : base(length, length)
         {
-            get { return size; }
-            set { size = value; }
+
         }
 
-        public Square(int size)
+        public override int GetPerimeter()
         {
-            this.size = size;
+            return Width * 4;
         }
 
-        public int GetArea()
+        public override int GetArea()
         {
-            return size * size;
+            return Width * Width;
         }
 
-        public int GetPerimeter()
+        public override string ToString()
         {
-            return size * 4;
+            return "I am a square";
         }
+
     }
 }

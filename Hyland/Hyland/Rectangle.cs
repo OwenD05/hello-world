@@ -29,13 +29,18 @@ namespace Hyland
             this.height = height;
         }
 
-        public int GetArea()
+        public virtual int GetArea()
         {
             return height * width;
         }
-        public int GetPerimeter()
+        public virtual int GetPerimeter()
         {
             return (height + width) * 2;
+        }
+
+        public override string ToString()
+        {
+            return "I am a rectangle";
         }
     }
 }
